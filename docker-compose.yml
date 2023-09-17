@@ -1,0 +1,55 @@
+version: "3"
+
+services:
+
+  #######################################
+  # RabbitMQ Service
+  #######################################
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # RabbitMQ main port
+      - "15672:15672" # RabbitMQ management UI port
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    networks:
+      - mynetwork
+
+  #######################################
+  # Service  Publish Backend
+  #######################################
+  publish-backend:
+    image: publish-backend
+    restart: always
+    env_file:
+      - .env
+      - ./publish-backend/.env.docker
+    depends_on:
+      - rabbitmq  # Ensure that the publish backend starts after RabbitMQ
+    ports:
+      - "8080:8080" # Map the internal port 8080 to the host's port 8080
+    networks:
+      - mynetwork
+
+
+  #######################################
+  # Service  Subscribe Backend
+  #######################################
+  subscribe-backend:
+    image: subscribe-backend
+    restart: always
+    env_file:
+      - .env
+      - ./publish-backend/.env.docker
+    depends_on:
+      - rabbitmq  # Ensure that the subscribe backend starts after RabbitMQ
+    ports:
+      - "8081:8081" # Map the internal port 8081 to the host's port 8081
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

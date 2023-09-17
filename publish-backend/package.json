@@ -1,0 +1,33 @@
+{
+  "name": "publish-backend",
+  "version": "1.0.0",
+  "description": "publish messages service",
+  "main": "src/server.ts",
+  "author": {
+    "name": "Arjun Subedi"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "build:watch": "tsc --watch",
+    "start:watch": "nodemon dist/server.js",
+    "start:dev": "nodemon --exec ts-node --type-check src/server.ts",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "amqplib": "^0.10.3",
+    "cors": "^2.8.5",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.10.1",
+    "@types/cors": "^2.8.14",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "winston": "^3.10.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}

@@ -1,0 +1,2 @@
+{"level":"info","message":"App running on PORT 8081","timestamp":"2023-09-10T12:19:06.056Z"}
+{"level":"error","message":"channel.assertQueue is not a function","timestamp":"2023-09-10T12:21:01.365Z"}
