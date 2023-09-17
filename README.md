@@ -41,7 +41,7 @@ To set up and run the simulation, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/high-volume-data-simulation.git
+   git clonehttps://github.com/arjunsubedi360/zeegal-task.git
    ```
 
 2. Change into the project directory:
@@ -91,8 +91,6 @@ Dockerize the server components using the provided Dockerfile or docker-compose 
 - Provide detailed documentation for configuring different message queue options.
 
 Feel free to contribute to this project by addressing the TODOs or improving any other aspect of the simulation. We welcome your feedback and contributions.
-
-For any questions or issues, please open a [GitHub issue](https://github.com/yourusername/high-volume-data-simulation/issues).
 
 ---
 
