@@ -47,7 +47,7 @@ To set up and run the simulation, follow these steps:
 2. Change into the project directory:
 
    ```bash
-   cd high-volume-data-simulation
+   cd zeegal-task
    ```
 
 3. Install the project dependencies for both the backend and frontend:
