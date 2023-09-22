@@ -29,7 +29,6 @@ class App {
     this.io.on("connection", (socket: socketIO.Socket) => {
       console.log("a user connected : " + socket.id);
 
-      // this.io.emit("send_message", { message: "Message from subscibe" });
 
       socket.on("disconnect", function () {
         console.log("socket disconnected : " + socket.id);
