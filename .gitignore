@@ -2,11 +2,10 @@ node_modules
 .env
 
 /publish-backend/node_modules
-/publish-backend/dist
+publish-backend/dist
 
 /client/node_modules
-/client/dist
 
 
 /subscribe-backend/node_modules
-/subscribe-backend/dist
+subscribe-backend/dist

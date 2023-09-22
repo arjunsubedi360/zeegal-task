@@ -10,7 +10,7 @@ const SocketComponent = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const socket = io.connect('http://localhost:8082'); // Replace with the actual backend URL and port
+    const socket = io.connect('http://localhost:8081'); // Replace with the actual backend URL and port
 
     // Listen to the 'send_message' event
     socket.on('send_message', (data) => {

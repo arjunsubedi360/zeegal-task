@@ -45,8 +45,12 @@ export const rabbitMq = {
 
 export const corsWhitelist = [
   'http://localhost:3001',
+  'http://localhost:3000/',
   'http://localhost:8080',
+  'http://localhost:8081',
   'http://localhost:8080/socket.io',
+  'http://localhost:8081/socket.io',
+
 ] as string[];
 
 export * from './rabbitmq';

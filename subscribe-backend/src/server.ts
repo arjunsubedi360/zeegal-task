@@ -6,7 +6,6 @@ import { Channel, ConsumeMessage } from "amqplib";
 import socketIO from "socket.io";
 
 import { RabbitMQ, corsWhitelist } from "./config";
-// import { RabbitMQConsumer } from "./consumers";
 import { ExchangeEnum } from "./enums";
 
 class App {
